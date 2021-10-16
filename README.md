@@ -3,5 +3,5 @@ It's actually my first minecraft plugin. It's a simple plugin that moderate your
 
 ## Permissions:
 ```
-kryso.ChatControl - /cc command (clearing chat)
+kryso.ChatControl - /chat clear  (clearing chat)
 ```
