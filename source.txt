@@ -1,0 +1,42 @@
+package pl.Kryso.ChatControl;
+
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class ChatControl extends JavaPlugin {
+
+    @Override
+    public void onEnable() {
+        // Register /chat command
+        this.getCommand("chat").setExecutor(new ChatControl());
+    }
+
+    @Override
+    public void onDisable() {
+
+    }
+
+    @Override
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if (sender instanceof Player) {
+            Player player = (Player) sender;
+            try {
+                if (args[0].equals("clear") || args[0].equals("cc")) {
+                    for (int i = 0; i <= 100; i++) {
+                        getServer().broadcastMessage(" ");
+                    }
+                    getServer().broadcastMessage(ChatColor.RED + "Chat has been cleared by " + sender.getName());
+                } else {
+                    player.sendMessage(ChatColor.RED + "Correct usage: \n /chat clear");
+                }
+            }
+            catch (IndexOutOfBoundsException e) {
+                player.sendMessage(ChatColor.RED + "Correct usage: \n /chat clear");
+            }
+        }
+        return true;
+    }
+}
