@@ -1,5 +1,6 @@
 # ChatControl.jar
 It's actually my first minecraft plugin. It's a simple plugin that moderate your server chat.
+
 Version 1.17.1
 
 ## Permissions:
