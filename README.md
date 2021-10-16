@@ -12,5 +12,5 @@ kryso.ChatControl - /chat clear  (clearing chat)
 1. Click ChatControl.jar above
 2. Click Download
 3. Go to server/Plugins then paste .jar file there
-4. Restart server / use /reload command.
+4. Restart server or use /reload command.
 5. Enjoy!
